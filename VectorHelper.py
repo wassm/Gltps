@@ -1,3 +1,4 @@
+import math as math
 class VectorHelper:
 
     @staticmethod
@@ -7,9 +8,7 @@ class VectorHelper:
                 ind2 = ind1 + 1
                 while (ind2 <= len(vector) - 1):
                     if vector[ind1] > vector[ind2]:
-                        tmp = vector[ind1]
-                        vector[ind1] = vector[ind2]
-                        vector[ind2] = tmp
+                        vector[ind1],vector[ind2]=vector[ind2],vector[ind1]
                     ind2 += 1
                 ind1 += 1
 
@@ -24,6 +23,27 @@ class VectorHelper:
             while i<=len(vector1)-1:
                 vector3.append(vector1[i]+vector2[i])
             return vector3
+
+
+    @staticmethod
+    def inverse(vector):
+    	size=len(vector)
+    	milieu=(size+1)/2
+    	i=0
+    	while i<=milieu :
+    		vector[i],vector[size-i-1]=vector[size-i-1],vector[i]
+    		i+=1
+
+    @staticmethod
+    def formule(vector):
+    	#sigmoid
+    	size=len(vector)
+    	ind=0
+    	while ind<size:
+    		vector[ind]=1/(1+math.exp(-vector[i]))
+    		ind+=1
+
+
 
 
 
