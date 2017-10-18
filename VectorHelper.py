@@ -24,6 +24,16 @@ class VectorHelper:
                 vector3.append(vector1[i]+vector2[i])
             return vector3
 
+    @staticmethod
+    def maxandmin(vector):
+        minimum = maximum = vector[1]
+        for element in vector:
+            if element > maximum:
+                maximum = element
+            if element < minimum:
+                minimum = element
+        return maximum, minimum
+
 
     @staticmethod
     def inverse(vector):
