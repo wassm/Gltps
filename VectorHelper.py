@@ -58,18 +58,6 @@ class VectorHelper:
 
     @staticmethod
     def maxandmin(vector):
-<<<<<<< HEAD
-        if len(vector)!=0:
-        	minimum=maximum= vector[1]
-        	for element in vector:
-	            if element > maximum:
-	                maximum = element
-	            if element < minimum:
-	                minimum = element
-        	return maximum, minimum
-        else :
-        	raise Exception("Empty vector")
-=======
     	"""return the maximum and the minimum in the vector.
 
     	parameters:
@@ -80,15 +68,17 @@ class VectorHelper:
     	min: the minimum of the components of the vector.
 
     	"""
-        minimum = maximum = vector[1]
-        for element in vector:
-            if element > maximum:
-                maximum = element
-            if element < minimum:
-                minimum = element
-        return maximum, minimum
-
->>>>>>> d9b04a0c204d672ed15a40dca285e352b24cb191
+        if len(vector)!=0:
+        	minimum=maximum= vector[1]
+        	for element in vector:
+	            if element > maximum:
+	                maximum = element
+	            if element < minimum:
+	                minimum = element
+        	return maximum, minimum
+        else :
+        	raise Exception("Empty vector")
+    	
 
     @staticmethod
     def inverse(vector):
