@@ -1,8 +1,27 @@
 import math as math
 class VectorHelper:
+	"""A class that handle vectors
+
+	handle a vector presented in a list
+	contain functions that:
+	sort a vector.
+	add two vectors.
+	return its minimum and maximum.
+	reverse a vector.
+	apply a function on the elements of a vector.
+
+	"""
 
     @staticmethod
     def sort(vector):
+    	""" sort a vector. 
+
+    	parameters:
+    	vector: a list which contains the componenets of a vector.
+
+    	apply changes in the parameter itself.
+
+    	"""
             ind1 = ind2 = 0
             while (ind1 <= len(vector) - 2):
                 ind2 = ind1 + 1
@@ -15,6 +34,18 @@ class VectorHelper:
 
     @staticmethod
     def add(vector1, vector2):
+    	"""add two vectors and returns the result.
+
+    	rise an exception when the two parameters have not the sime length.
+
+    	parameters:
+    	vector1: the list of components of the first vector.
+    	vector2: the list of components of the second vector.
+
+    	return:
+    	vector3 : a list of the components of the sum of the 2 vectors.
+
+    	"""
         if len(vector1) != len(vector2):
             raise Exception("Impossible to add two vectors with different sizes !!")
         else:
@@ -27,6 +58,7 @@ class VectorHelper:
 
     @staticmethod
     def maxandmin(vector):
+<<<<<<< HEAD
         if len(vector)!=0:
         	minimum=maximum= vector[1]
         	for element in vector:
@@ -37,9 +69,40 @@ class VectorHelper:
         	return maximum, minimum
         else :
         	raise Exception("Empty vector")
+=======
+    	"""return the maximum and the minimum in the vector.
+
+    	parameters:
+    	vector: the list of components of the vector.
+
+    	return:
+    	max: the maximum of the components of the vector.
+    	min: the minimum of the components of the vector.
+
+    	"""
+        minimum = maximum = vector[1]
+        for element in vector:
+            if element > maximum:
+                maximum = element
+            if element < minimum:
+                minimum = element
+        return maximum, minimum
+
+>>>>>>> d9b04a0c204d672ed15a40dca285e352b24cb191
 
     @staticmethod
     def inverse(vector):
+    	"""reverse the vector.
+
+    	reverse the components of the vector so they look like,
+    	the first will be the last, the last will be the first ...
+
+    	parameters:
+    	vector: the list of components of the vector.
+
+    	apply changes in the parameter itself.
+
+    	"""
     	size=len(vector)
     	milieu=(size+1)/2
     	i=0
@@ -49,6 +112,14 @@ class VectorHelper:
 
     @staticmethod
     def formule(vector):
+    	""" apply a formula on the elements in the vector. 
+
+        parameters:
+    	vector: the list of components of the vector.
+
+    	apply changes in the parameter itself.
+
+    	"""
     	#sigmoid
     	size=len(vector)
     	ind=0
