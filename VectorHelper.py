@@ -16,23 +16,29 @@ class VectorHelper:
     @staticmethod
     def add(vector1, vector2):
         if len(vector1) != len(vector2):
-            raise Exception("Impossible to add to vectors with different sizes !!")
+            raise Exception("Impossible to add two vectors with different sizes !!")
         else:
             vector3 = list()
             i = 0
             while i<=len(vector1)-1:
                 vector3.append(vector1[i]+vector2[i])
+                i=i+1
             return vector3
 
     @staticmethod
     def maxandmin(vector):
-        minimum = maximum = vector[1]
-        for element in vector:
-            if element > maximum:
-                maximum = element
-            if element < minimum:
-                minimum = element
-        return maximum, minimum
+        if len(vector)!=0:
+        	minimum=maximum= vector[1]
+        	for element in vector:
+	            if element > maximum:
+	                maximum = element
+	            if element < minimum:
+	                minimum = element
+        	return maximum, minimum
+        else :
+        	raise Exception("Empty vector")
+
+        
 
     """
     fait par ahcene faïçal
