@@ -38,12 +38,6 @@ class VectorHelper:
         else :
         	raise Exception("Empty vector")
 
-        
-
-    """
-    fait par ahcene faïçal
-    methode qui inverse un vecteur de valeurs numeriques
-    """
     @staticmethod
     def inverse(vector):
     	size=len(vector)
@@ -52,10 +46,7 @@ class VectorHelper:
     	while i<=milieu :
     		vector[i],vector[size-i-1]=vector[size-i-1],vector[i]
     		i+=1
-    """
-    fait par ahcene faïçal
-    methodes qui aplique la segmoid sur tous les elements de vecteur 
-    """
+
     @staticmethod
     def formule(vector):
     	#sigmoid
