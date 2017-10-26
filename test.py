@@ -12,7 +12,7 @@ class VectorHelperTest(unittest.TestCase):
 	def test_add(self):
 		vector1=[1,0,4,3,99,45,7,8,2]
 		vector2=[4,5,7,8,2,9,6,3,41]
-		vectorResult=vectorHelper.VectorHelper.add(d,b)
+		vectorResult=vectorHelper.VectorHelper.add(vector1,vector2)
 		self.assertEqual(vectorResult,[5,5,11,11,101,54,13,11,43])
 
 	#teste de le lancemant d'une exception a l'addition de deux vecteurs de tailles differentes 
@@ -35,16 +35,18 @@ class VectorHelperTest(unittest.TestCase):
 	def test_inverse(self):
 		vector1=[1,0,2,4,5,8,9,7,6]
 		vector2=[6,7,9,8,5,4,2,0,1]
-		self.assertEqual(VectorHelper.VectorHelper.inverse(vector1),vector2)
+		vectorHelper.VectorHelper.inverse(vector1)
+		self.assertEqual(vector1,vector2)
 
 	#teste la methode formule()
 	def test_formule(self):
-		vector1=[0,1,2,3]
+		vector1=[0.,1.,2.,3.]
 		vector2=[0.5,
 		0.7310585786300049,
 		0.8807970779778823,
 		0.9525741268224334]
-		self.assertEqual(vectorHelper.VectorHelper.formule(vector1),vector2)
+		vectorHelper.VectorHelper.formule(vector1)
+		self.assertEqual(vector1,vector2)
 
 
 unittest.main()
